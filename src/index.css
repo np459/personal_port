@@ -1,12 +1,17 @@
 :root {
-  --bg: #e3e0d8;
-  --ink: #33261a;
-  --ink-soft: #6b5e4e;
-  --ink-muted: #9a8f7e;
-  --paper: #faf7ee;
-  --paper-line: #e6e0d0;
-  --accent: #482213;
-  --accent-soft: #6f4531;
+  /* page (deep warm cream) */
+  --bg: #e9d8ad;
+  --fg: #33261a;
+  --fg-soft: #6e5a40;
+  --fg-muted: #a08a5f;
+  --accent: #632626; /* red chai — matches the experience folder */
+
+  /* paper (inside folders) */
+  --ink: #3c2a1c;
+  --ink-soft: #6e5844;
+  --ink-muted: #a08b6d;
+  --paper: #f8f1de;
+  --paper-line: #e7d9b8;
 }
 
 * {
@@ -39,7 +44,7 @@ body {
     rgba(255, 255, 255, 0.14) 0 1px,
     transparent 1px 4px
   );
-  color: var(--ink);
+  color: var(--fg);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -87,14 +92,14 @@ button:focus-visible {
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
-  color: var(--ink);
+  color: var(--fg);
 }
 
 .site-script {
   font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
   font-size: clamp(22px, 4.6vw, 34px);
-  color: #948f7c;
+  color: var(--accent);
   margin-top: -10px;
   padding-left: 14%;
   transform: rotate(-1.5deg);
@@ -104,7 +109,7 @@ button:focus-visible {
   margin-top: 28px;
   max-width: 56ch;
   font-size: 16px;
-  color: var(--ink-soft);
+  color: var(--fg-soft);
 }
 
 .site-intro strong {
@@ -115,7 +120,7 @@ button:focus-visible {
 .site-intro-sub {
   margin-top: 8px;
   font-size: 14px;
-  color: var(--ink-muted);
+  color: var(--fg-muted);
 }
 
 .site-hint {
@@ -123,7 +128,7 @@ button:focus-visible {
   font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
   font-size: 18px;
-  color: var(--ink-muted);
+  color: var(--fg-muted);
 }
 
 /* ---------- Folder stack ---------- */
@@ -145,7 +150,7 @@ button:focus-visible {
       transparent 1px 3px
     ),
     repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.06) 0 1px, transparent 1px 5px);
-  box-shadow: 0 -10px 24px rgba(72, 34, 19, 0.22);
+  box-shadow: 0 -10px 26px rgba(60, 20, 10, 0.3);
 }
 
 .folder + .folder {
@@ -165,24 +170,24 @@ button:focus-visible {
   z-index: 4;
 }
 
-.f-sage {
-  --fc: #b3ae9b;
-  --fc-ink: #faf7ec;
+.f-redchai {
+  --fc: #632626;
+  --fc-ink: #f3e2d3;
 }
 
-.f-lemon {
-  --fc: #fff7b1;
-  --fc-ink: #8f855c;
+.f-masala {
+  --fc: #9d5353;
+  --fc-ink: #f7e6dd;
 }
 
-.f-espresso {
-  --fc: #482213;
-  --fc-ink: #f0e4d2;
+.f-cinnamon {
+  --fc: #bf8b67;
+  --fc-ink: #fbf1e2;
 }
 
-.f-lavender {
-  --fc: #eee7ff;
-  --fc-ink: #7a6f96;
+.f-cardamom {
+  --fc: #dbcb96;
+  --fc-ink: #5a4c2e;
 }
 
 .folder-top {
@@ -269,7 +274,7 @@ button:focus-visible {
   border-radius: 14px;
   padding: 26px 28px 30px;
   color: var(--ink);
-  box-shadow: 0 2px 0 rgba(72, 34, 19, 0.1);
+  box-shadow: 0 2px 0 rgba(60, 20, 10, 0.12);
 }
 
 /* ---------- Documents inside folders ---------- */
@@ -327,7 +332,7 @@ button:focus-visible {
 }
 
 .pill {
-  background: #ece7d9;
+  background: #eee2c4;
   color: var(--ink-soft);
   font-size: 12.5px;
   font-weight: 500;
@@ -359,7 +364,7 @@ button:focus-visible {
   padding: 10px 16px;
   border: 1px solid var(--paper-line);
   border-radius: 12px;
-  background: #fffdf7;
+  background: #fdf8ea;
   color: var(--ink);
   transition: border-color 0.15s ease;
 }
@@ -373,7 +378,7 @@ button:focus-visible {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #ece7d9;
+  background: #eee2c4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,17 +423,17 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--ink-soft);
+  color: var(--fg-soft);
   transition: color 0.15s ease, background 0.15s ease;
 }
 
 .social-link:hover {
-  color: var(--ink);
-  background: rgba(72, 34, 19, 0.07);
+  color: var(--fg);
+  background: rgba(60, 20, 10, 0.08);
 }
 
 .footer-updated {
-  color: var(--ink-muted);
+  color: var(--fg-muted);
   font-size: 13px;
 }
 

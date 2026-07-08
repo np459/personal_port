@@ -1,7 +1,7 @@
 export const profile = {
   name: "Neha Prasla",
   email: "nehakprasla@gmail.com",
-  github: "#",
+  github: "https://github.com/np459",
   linkedin: "#",
   updated: "07/08/2026",
 }
@@ -58,7 +58,7 @@ export const research = [
     link: {
       label: "Chitrala Lab",
       sub: "University of Houston",
-      href: "#", // TODO: replace with the real lab URL
+      href: "https://chitrala.egr.uh.edu/",
     },
   },
 ]

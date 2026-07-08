@@ -81,7 +81,7 @@ export default function App() {
 
       <main className="container stack">
         <Folder
-          color="sage"
+          color="redchai"
           tabPos="left"
           label="experience"
           note="clinical · houston"
@@ -94,7 +94,7 @@ export default function App() {
         </Folder>
 
         <Folder
-          color="lemon"
+          color="masala"
           tabPos="mid"
           label="research"
           note="chitrala lab · uh"
@@ -107,7 +107,7 @@ export default function App() {
         </Folder>
 
         <Folder
-          color="espresso"
+          color="cinnamon"
           tabPos="right"
           label="skills"
           note="& certifications"
@@ -129,7 +129,7 @@ export default function App() {
         </Folder>
 
         <Folder
-          color="lavender"
+          color="cardamom"
           tabPos="left"
           label="projects"
           note="work in progress"
