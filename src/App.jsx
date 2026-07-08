@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { profile, education, experience, research, skills, projects } from "./data.js"
-import { LinkIcon, ArrowIcon, GithubIcon, LinkedinIcon, MailIcon } from "./components/Icons.jsx"
+import { LinkIcon, ArrowIcon, LinkedinIcon, MailIcon } from "./components/Icons.jsx"
 
 function Doc({ xp }) {
   return (
@@ -12,7 +12,11 @@ function Doc({ xp }) {
         </div>
         <span className="doc-period">{xp.period}</span>
       </div>
-      <p className="doc-desc">{xp.description}</p>
+      {(Array.isArray(xp.description) ? xp.description : [xp.description]).map((para) => (
+        <p className="doc-desc" key={para.slice(0, 40)}>
+          {para}
+        </p>
+      ))}
       <div className="pills">
         {xp.tags.map((tag) => (
           <span className="pill" key={tag}>
@@ -66,7 +70,12 @@ export default function App() {
           <span>houston, tx</span>
           <span>neha prasla</span>
         </div>
-        <h1 className="site-name">Hi, I'm Neha</h1>
+        <h1 className="site-name">
+          Hi, I'm Neha{" "}
+          <span className="site-name-emoji" role="img" aria-label="stethoscope">
+            🩺
+          </span>
+        </h1>
         <p className="site-script">medicine, research &amp; everything in between</p>
         <p className="site-intro">
           I love <strong>emergency medicine</strong>, <strong>aerospace medicine</strong>,{" "}
@@ -74,7 +83,7 @@ export default function App() {
           <a href={`mailto:${profile.email}`}>say hi →</a>
         </p>
         <p className="site-intro site-intro-sub">
-          {education.degree} @ {education.school} · {education.grad}
+          {education.degree} @ {education.school}
         </p>
         <p className="site-hint">☞ open a folder</p>
       </header>
@@ -161,11 +170,6 @@ export default function App() {
       <footer className="footer">
         <div className="container footer-inner">
           <div className="socials">
-            {profile.github !== "#" && (
-              <a className="social-link" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                <GithubIcon />
-              </a>
-            )}
             {profile.linkedin !== "#" && (
               <a className="social-link" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <LinkedinIcon />

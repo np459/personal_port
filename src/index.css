@@ -95,6 +95,11 @@ button:focus-visible {
   color: var(--fg);
 }
 
+.site-name-emoji {
+  font-size: 0.72em;
+  vertical-align: baseline;
+}
+
 .site-script {
   font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
@@ -234,7 +239,7 @@ button:focus-visible {
 }
 
 .tab-right {
-  right: 30px;
+  right: 210px;
 }
 
 .folder-ind {
@@ -322,6 +327,10 @@ button:focus-visible {
   color: var(--ink-soft);
   font-size: 14.5px;
   margin-top: 10px;
+}
+
+.doc-desc + .doc-desc {
+  margin-top: 8px;
 }
 
 .pills {
@@ -454,6 +463,10 @@ button:focus-visible {
 
   .tab-mid {
     left: 26%;
+  }
+
+  .tab-right {
+    right: 150px;
   }
 
   .paper {
