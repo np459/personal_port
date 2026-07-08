@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { profile, education, experience, research, skills, projects } from "./data.js"
 import { LinkIcon, ArrowIcon, LinkedinIcon, MailIcon } from "./components/Icons.jsx"
 
@@ -37,6 +37,61 @@ function Doc({ xp }) {
         </a>
       )}
     </article>
+  )
+}
+
+const EKG_CYCLE = "l40,0 l8,-5 l8,5 l14,0 l6,-18 l6,32 l6,-14 l16,-6 l8,6 l38,0"
+
+function Ekg() {
+  const d = `M0,30 ${EKG_CYCLE.repeat(8)}`
+  return (
+    <div className="ekg container" aria-hidden="true">
+      <svg width="100%" height="60" viewBox="0 0 600 60" preserveAspectRatio="xMidYMid slice">
+        <g className="ekg-line">
+          <path d={d} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      </svg>
+    </div>
+  )
+}
+
+function Vitals() {
+  const [hr, setHr] = useState(72)
+
+  useEffect(() => {
+    const t = setInterval(() => setHr(68 + Math.floor(Math.random() * 12)), 2000)
+    return () => clearInterval(t)
+  }, [])
+
+  return (
+    <div className="vitals">
+      <div className="vitals-title">
+        <span>pt: n. prasla</span>
+        <span className="vitals-live">
+          <span className="blink">●</span> live
+        </span>
+      </div>
+      <div className="vitals-row">
+        <span>
+          <span className="vitals-heart">♥</span> hr
+        </span>
+        <span>{hr} bpm</span>
+      </div>
+      <div className="vitals-row">
+        <span>bp</span>
+        <span>118/76</span>
+      </div>
+      <div className="vitals-row">
+        <span>caffeine</span>
+        <span>high ▲</span>
+      </div>
+      <div className="vitals-row">
+        <span>mcat prep</span>
+        <span>
+          loading<span className="blink">…</span>
+        </span>
+      </div>
+    </div>
   )
 }
 
@@ -86,7 +141,10 @@ export default function App() {
           {education.degree} @ {education.school}
         </p>
         <p className="site-hint">☞ open a folder</p>
+        <Vitals />
       </header>
+
+      <Ekg />
 
       <main className="container stack">
         <Folder
