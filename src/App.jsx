@@ -95,7 +95,7 @@ function Vitals() {
   )
 }
 
-function Folder({ color, tabPos, label, note, open, onToggle, children }) {
+function Folder({ color, tabPos, label, open, onToggle, children }) {
   return (
     <section className={`folder f-${color}${open ? " open" : ""}`}>
       <button type="button" className="folder-top" onClick={onToggle} aria-expanded={open}>
@@ -103,7 +103,6 @@ function Folder({ color, tabPos, label, note, open, onToggle, children }) {
         <span className="folder-ind" aria-hidden="true">
           {open ? "−" : "+"}
         </span>
-        <span className="folder-note">{note}</span>
       </button>
       <div className="folder-body">
         <div className="folder-inner">
@@ -136,7 +135,6 @@ export default function App() {
           {education.degree} @ {education.school}
         </p>
         <p className="site-hint">☞ open a folder</p>
-        <Vitals />
       </header>
 
       <Ekg />
@@ -146,7 +144,6 @@ export default function App() {
           color="redchai"
           tabPos="left"
           label="experience"
-          note="clinical · houston"
           open={openId === "experience"}
           onToggle={() => toggle("experience")}
         >
@@ -159,7 +156,6 @@ export default function App() {
           color="masala"
           tabPos="mid"
           label="research"
-          note="chitrala lab · uh"
           open={openId === "research"}
           onToggle={() => toggle("research")}
         >
@@ -172,7 +168,6 @@ export default function App() {
           color="cinnamon"
           tabPos="right"
           label="skills"
-          note="& certifications"
           open={openId === "skills"}
           onToggle={() => toggle("skills")}
         >
@@ -194,7 +189,6 @@ export default function App() {
           color="cardamom"
           tabPos="left"
           label="projects"
-          note="work in progress"
           open={openId === "projects"}
           onToggle={() => toggle("projects")}
         >
@@ -219,6 +213,10 @@ export default function App() {
           ))}
         </Folder>
       </main>
+
+      <div className="container vitals-wrap">
+        <Vitals />
+      </div>
 
       <footer className="footer">
         <div className="container footer-inner">
