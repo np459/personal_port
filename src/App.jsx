@@ -56,7 +56,7 @@ function Folder({ color, tabPos, label, note, open, onToggle, children }) {
 }
 
 export default function App() {
-  const [openId, setOpenId] = useState("experience")
+  const [openId, setOpenId] = useState(null)
   const toggle = (id) => setOpenId((cur) => (cur === id ? null : id))
 
   return (
