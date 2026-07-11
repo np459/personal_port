@@ -18,10 +18,11 @@ export const experience = [
     company: "Larry L. Likover, M.D., P.A. – Orthopedic Surgery · Houston, TX",
     period: "Feb 2026 – May 2026",
     description: [
-      "Observed patient consultations and surgical case discussions at a practice affiliated with Memorial Hermann Memorial City Medical Center, gaining exposure to orthopedic evaluation and treatment planning for musculoskeletal conditions.",
-      "Retrieved and organized patient files, prepared intake forms and documentation packets, and assisted with clinical documentation under physician supervision.",
+      "Shadowed a practicing orthopedic surgeon at a practice affiliated with Memorial Hermann Memorial City Medical Center, joining patient visits and evaluating X-ray and MRI imaging alongside the physician to build a working understanding of orthopedic diagnosis and treatment planning for musculoskeletal conditions.",
+      "Prepared patients for corticosteroid injection procedures and managed patient flow by retrieving patient files, escorting patients to exam rooms, and readying them for physician evaluation.",
+      "Supported daily clinic operations under physician supervision by preparing intake forms and documentation packets and assisting with clinical documentation.",
     ],
-    tags: ["Orthopedics", "Patient Intake", "Clinical Documentation"],
+    tags: ["Orthopedics", "Diagnostic Imaging", "Injection Prep", "Clinical Documentation"],
   },
   {
     role: "Clinical Intern",
@@ -64,7 +65,7 @@ export const research = [
     description: [
       "Co-authoring a bioinformatics manuscript analyzing gene expression differences in triple-negative breast cancer between African American and European American patient cohorts, using public NCBI datasets.",
       "Compiling, cleaning, and organizing large-scale gene expression data, and reproducing core analyses from a published study to validate the analytical pipeline.",
-      "Extending prior work with additional statistical analysis and machine learning models, and developing a reproducible pipeline and documentation to support the manuscript in progress.",
+      "Developing a reproducible pipeline and documentation to support the manuscript in progress.",
     ],
     tags: ["Bioinformatics", "Python", "R", "Machine Learning", "NCBI"],
     link: {
@@ -98,8 +99,8 @@ export const projects = [
     meta: "Bioinformatics · Python, R",
   },
   {
-    title: "Personal Portfolio Website",
+    title: "Personal Portfolio Websites (2)",
     period: "Jul 2026",
-    meta: "Built from scratch in React",
+    meta: "Two personal websites built from scratch in React",
   },
 ]

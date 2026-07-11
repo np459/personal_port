@@ -333,7 +333,8 @@ button:focus-visible {
 }
 
 .tab-right {
-  right: 30px;
+  /* keep clear of the +/− indicator on the folder above */
+  right: 64px;
 }
 
 .folder-ind {
