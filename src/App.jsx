@@ -127,13 +127,11 @@ export default function App() {
         <h1 className="site-name">Hi, I'm Neha</h1>
         <p className="site-script">medicine, research &amp; everything in between</p>
         <p className="site-intro">
-          I love <strong>emergency medicine</strong>, <strong>aerospace medicine</strong>,{" "}
+          I love <strong>emergency medicine</strong>, <strong>orthopedics</strong>,{" "}
           <strong>bioinformatics</strong>, and <strong>AI / machine learning</strong>.{" "}
           <a href={`mailto:${profile.email}`}>say hi →</a>
         </p>
-        <p className="site-intro site-intro-sub">
-          {education.degree} @ {education.school}
-        </p>
+        <p className="site-intro site-intro-sub">{education.degree}</p>
         <p className="site-hint">☞ open a folder</p>
       </header>
 
@@ -230,7 +228,9 @@ export default function App() {
               <MailIcon />
             </a>
           </div>
-          <span className="footer-updated">updated {profile.updated}</span>
+          <span className="footer-updated">
+            {education.school} · updated {profile.updated}
+          </span>
         </div>
       </footer>
     </>
