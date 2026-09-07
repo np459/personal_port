@@ -131,7 +131,7 @@ export default function App() {
           <strong>bioinformatics</strong>, and <strong>AI / machine learning</strong>.{" "}
           <a href={`mailto:${profile.email}`}>say hi →</a>
         </p>
-        <p className="site-intro site-intro-sub">{education.degree}</p>
+        <p className="site-intro site-intro-sub">{education.degree}, {education.school}</p>
         <p className="site-hint">☞ open a folder</p>
       </header>
 

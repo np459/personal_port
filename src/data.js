@@ -7,8 +7,8 @@ export const profile = {
 }
 
 export const education = {
-  school: "Prairie View A&M University",
-  degree: "B.S. Kinesiology",
+  school: "Texas A&M University",
+  degree: "B.S. Biomedical Engineering",
   grad: "Class of 2030",
 }
 
