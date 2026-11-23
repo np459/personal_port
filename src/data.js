@@ -60,6 +60,16 @@ export const experience = [
 export const research = [
   {
     role: "Undergraduate Researcher",
+    company: "ACE Lab, Dept. of Industrial & Systems Engineering, Texas A&M · College Station, TX",
+    period: "Fall 2026 – Present",
+    description: [
+      "Supporting an upcoming user study of HyperCoach, an NSF PATHS-UP mobile health app that pairs Bluetooth blood pressure cuffs and scales with digital coaching to help patients self-manage hypertension.",
+      "Assisting with study preparation by reviewing protocols and prior HyperCoach research on user engagement, adherence, and blood pressure outcomes.",
+    ],
+    tags: ["Mobile Health", "Hypertension", "User Studies", "NSF PATHS-UP"],
+  },
+  {
+    role: "Undergraduate Researcher",
     company: "Chitrala Lab, Dept. of Engineering Technology, University of Houston",
     period: "Jun 2026 – Present",
     description: [
