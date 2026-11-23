@@ -3,7 +3,7 @@ export const profile = {
   email: "nehakprasla@gmail.com",
   github: "https://github.com/np459",
   linkedin: "#",
-  updated: "07/08/2026",
+  updated: "11/23/2026",
 }
 
 export const education = {
