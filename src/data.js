@@ -67,6 +67,11 @@ export const research = [
       "Assisting with study preparation by reviewing protocols and prior HyperCoach research on user engagement, adherence, and blood pressure outcomes.",
     ],
     tags: ["Mobile Health", "Hypertension", "User Studies", "NSF PATHS-UP"],
+    link: {
+      label: "ACE Lab",
+      sub: "Texas A&M University",
+      href: "https://acelab.tamu.edu/",
+    },
   },
   {
     role: "Undergraduate Researcher",
