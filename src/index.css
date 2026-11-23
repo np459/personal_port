@@ -1,17 +1,24 @@
 :root {
-  /* page (deep warm cream) */
-  --bg: #f0e3c2;
-  --fg: #33261a;
-  --fg-soft: #6e5a40;
-  --fg-muted: #a08a5f;
-  --accent: #632626; /* red chai — matches the experience folder */
+  /* coquette palette */
+  --coffee: #6f4e37;
+  --ivory: #fff8e7;
+  --blush: #f7dad9;
+  --lemon: #fbf2c0;
+  --rose: #ffd0cd;
+
+  /* page (ivory with pink polka dots) */
+  --bg: var(--ivory);
+  --fg: #4a3324;
+  --fg-soft: #6f4e37;
+  --fg-muted: #8c6b54;
+  --accent: var(--coffee);
 
   /* paper (inside folders) */
-  --ink: #3c2a1c;
-  --ink-soft: #6e5844;
-  --ink-muted: #a08b6d;
-  --paper: #f8f1de;
-  --paper-line: #e7d9b8;
+  --ink: #4a3324;
+  --ink-soft: #6f4e37;
+  --ink-muted: #8c6b54;
+  --paper: #fffbf2;
+  --paper-line: #f3dcd3;
 }
 
 * {
@@ -39,11 +46,10 @@ html {
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background-color: var(--bg);
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.14) 0 1px,
-    transparent 1px 4px
-  );
+  background-image: radial-gradient(circle, var(--rose) 4px, transparent 4.5px),
+    radial-gradient(circle, var(--rose) 4px, transparent 4.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
   color: var(--fg);
   font-size: 16px;
   line-height: 1.6;
@@ -167,7 +173,7 @@ button:focus-visible {
 .vitals {
   display: inline-block;
   min-width: 200px;
-  background: #632626;
+  background: var(--coffee);
   background-image: repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.05) 0 1px,
@@ -179,8 +185,8 @@ button:focus-visible {
   font-family: "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 12px;
   line-height: 1.9;
-  color: #f3e2d3;
-  box-shadow: 0 8px 22px rgba(60, 20, 10, 0.3);
+  color: var(--ivory);
+  box-shadow: 0 8px 22px rgba(111, 78, 55, 0.3);
 }
 
 .vitals-title {
@@ -190,12 +196,12 @@ button:focus-visible {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #dbcb96;
+  color: var(--lemon);
   margin-bottom: 6px;
 }
 
 .vitals-live {
-  color: #f08080;
+  color: var(--rose);
 }
 
 .vitals-row {
@@ -206,7 +212,7 @@ button:focus-visible {
 
 .vitals-heart {
   display: inline-block;
-  color: #f08080;
+  color: var(--rose);
   animation: vitals-pulse 1s ease-in-out infinite;
 }
 
@@ -249,7 +255,7 @@ button:focus-visible {
       transparent 1px 3px
     ),
     repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.06) 0 1px, transparent 1px 5px);
-  box-shadow: 0 -10px 26px rgba(60, 20, 10, 0.3);
+  box-shadow: 0 -8px 24px rgba(111, 78, 55, 0.22);
 }
 
 .folder + .folder {
@@ -269,24 +275,28 @@ button:focus-visible {
   z-index: 4;
 }
 
+/* coffee bean */
 .f-redchai {
-  --fc: #632626;
-  --fc-ink: #f3e2d3;
+  --fc: var(--coffee);
+  --fc-ink: var(--ivory);
 }
 
+/* cotton rose */
 .f-masala {
-  --fc: #9d5353;
-  --fc-ink: #f7e6dd;
+  --fc: var(--rose);
+  --fc-ink: var(--coffee);
 }
 
+/* lemon chiffon */
 .f-cinnamon {
-  --fc: #bf8b67;
-  --fc-ink: #fbf1e2;
+  --fc: var(--lemon);
+  --fc-ink: var(--coffee);
 }
 
+/* soft blush */
 .f-cardamom {
-  --fc: #dbcb96;
-  --fc-ink: #5a4c2e;
+  --fc: var(--blush);
+  --fc-ink: var(--coffee);
 }
 
 .folder-top {
@@ -366,7 +376,7 @@ button:focus-visible {
   border-radius: 14px;
   padding: 26px 28px 30px;
   color: var(--ink);
-  box-shadow: 0 2px 0 rgba(60, 20, 10, 0.12);
+  box-shadow: 0 2px 0 rgba(111, 78, 55, 0.12);
 }
 
 /* ---------- Documents inside folders ---------- */
@@ -428,7 +438,7 @@ button:focus-visible {
 }
 
 .pill {
-  background: #eee2c4;
+  background: var(--blush);
   color: var(--ink-soft);
   font-size: 12.5px;
   font-weight: 500;
@@ -460,7 +470,7 @@ button:focus-visible {
   padding: 10px 16px;
   border: 1px solid var(--paper-line);
   border-radius: 12px;
-  background: #fdf8ea;
+  background: var(--ivory);
   color: var(--ink);
   transition: border-color 0.15s ease;
 }
@@ -474,7 +484,7 @@ button:focus-visible {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #eee2c4;
+  background: var(--rose);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,7 +535,7 @@ button:focus-visible {
 
 .social-link:hover {
   color: var(--fg);
-  background: rgba(60, 20, 10, 0.08);
+  background: rgba(111, 78, 55, 0.1);
 }
 
 .footer-updated {
