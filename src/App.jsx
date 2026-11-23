@@ -124,7 +124,7 @@ export default function App() {
           <span>houston, tx</span>
           <span>neha prasla</span>
         </div>
-        <h1 className="site-name">Hi, I’m Neha</h1>
+        <h1 className="site-name">Hi, I'm Neha</h1>
         <p className="site-script">medicine, research &amp; everything in between</p>
         <p className="site-intro">
           I love <strong>emergency medicine</strong>, <strong>orthopedics</strong>,{" "}
