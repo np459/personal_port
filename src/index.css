@@ -94,11 +94,12 @@ button:focus-visible {
 }
 
 .site-name {
-  font-family: "Pinyon Script", "Instrument Serif", Georgia, serif;
-  font-size: clamp(60px, 13vw, 108px);
+  font-family: "Cormorant Garamond", "Instrument Serif", Georgia, serif;
+  font-size: clamp(46px, 10.5vw, 92px);
   font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
   color: var(--fg);
 }
 
